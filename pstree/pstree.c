@@ -144,6 +144,8 @@ void getSon(){                     //用孩子兄弟链表的方式在数组里�
 	
 int printNode(int i){                //打印进程名(PID)，返回打印的长度
 	if (withPid){
+		
+		if (pArray[i]->ppid == 1 && pArray[i]->nxtBrother == -1) printf("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n");
 		char buf[150] = {0};
 		sprintf(buf, "%s(%d)", pArray[i]->name, pArray[i]->pid);
 		printf("%s", buf);
@@ -190,8 +192,6 @@ void printTree(int index, int offset, int newline, int len, int* arr){    //递�
 				if (arr[i]>0) putchar('|'); else putchar(' ');
 			}
 		}
-
-	    if (pArray[index]->ppid == 1 && pArray[index]->nxtBrother == -1) printf("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n"); //aaaaaaaaaaaaaaaaaaaaaaaaaa
 		selfLen = printNode(index); 
 	}
 	int son = pArray[index]->firstSon;                               
