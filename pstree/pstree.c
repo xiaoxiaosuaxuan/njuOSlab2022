@@ -192,7 +192,7 @@ void printTree(int index, int offset, int newline, int len, int* arr){    //é€’å
 		}
 		selfLen = printNode(index); 
 	}
-	if (index != 0 && pArray[index]->nxtBrother == -1) printf("i'm the last child!");
+	if (index != 0 && pArray[index]->nxtBrother == -1) printf("   i'm the last child!   ");
 	int son = pArray[index]->firstSon;                               
 	if (son != -1){
 		int* newarr = (int*) malloc((len+1) * sizeof(int));
