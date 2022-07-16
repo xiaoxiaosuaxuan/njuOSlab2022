@@ -138,7 +138,6 @@ void getSon(){                     //用孩子兄弟链表的方式在数组里�
 			struct pnode* tmp = pArray[firstSon];
 			while(tmp->nxtBrother != -1) tmp = pArray[tmp->nxtBrother];
 			tmp->nxtBrother = i;
-			assert(pArray[i]->nxtBrother == -1);
 		}
 	}
 }
@@ -210,7 +209,7 @@ void printTree(int index, int offset, int newline, int len, int* arr){    //递�
 			tmp = pArray[tmp->nxtBrother];
 		}
 	}
-	if (index != 0 && pArray[index]->nxtBrother == -1) {free(arr); printf("\naaaaaaaa");}      //没有下一个兄弟，说明是最后使用arr的，由它来释放空间
+	if (index != 0 && pArray[index]->nxtBrother == -1) {free(arr); printf("aaaaaaaa");}      //没有下一个兄弟，说明是最后使用arr的，由它来释放空间
 
 }
 
