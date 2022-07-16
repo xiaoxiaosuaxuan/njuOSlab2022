@@ -157,6 +157,7 @@ int printNode(int i){                //打印进程名(PID)，返回打印的长
 
 
 void printTree(int index, int offset, int newline, int len, int* arr){    //递归打印出树
+	assert(pArray[index]->pid != 1471);
 	if (pArray[index]->pid == 1471){
 		printf("i'm 1471 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n");
 		struct pnode* a = pArray[index];
