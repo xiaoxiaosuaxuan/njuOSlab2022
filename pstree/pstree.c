@@ -144,11 +144,9 @@ void getSon(){                     //用孩子兄弟链表的方式在数组里�
 	
 int printNode(int i){                //打印进程名(PID)，返回打印的长度
 	if (withPid){
-		if (pArray[i]->ppid == 1 && pArray[i]->nxtBrother == -1) printf("aaaaaaaaaaaaaaaaaaaaaaa\n");	
 		char buf[150] = {0};
 		sprintf(buf, "%s(%d)", pArray[i]->name, pArray[i]->pid);
 		printf("%s", buf);
-		if (pArray[i]->ppid == 1 && pArray[i]->nxtBrother == -1) printf("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n");
 		return strlen(buf);
 	}	
 	else{
@@ -159,7 +157,6 @@ int printNode(int i){                //打印进程名(PID)，返回打印的长
 
 
 void printTree(int index, int offset, int newline, int len, int* arr){    //递归打印出树
-	if (pArray[index]->ppid == 1 && pArray[index]->nxtBrother == -1) printf("%s(%d)", pArray[index]->name, pArray[index]->pid);
 	assert(pArray[index]->pid != 2);
 	assert(index >= 0 && index < pNum);
 	int selfLen = 0;
@@ -193,7 +190,6 @@ void printTree(int index, int offset, int newline, int len, int* arr){    //递�
 			}
 		}
 		selfLen = printNode(index); 
-		if (pArray[index]->ppid == 1 && pArray[index]->nxtBrother == -1) printf("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\n");
 	}
 	int son = pArray[index]->firstSon;                               
 	if (son != -1){
@@ -215,7 +211,6 @@ void printTree(int index, int offset, int newline, int len, int* arr){    //递�
 	}
 if (pArray[index]->ppid == 1 && pArray[index]->nxtBrother == -1) printf("ccccccccccccccccccccccccccccccccccccccccccccc\n");
 	if (index != 0 && pArray[index]->nxtBrother == -1) {free(arr); arr = NULL;}      //没有下一个兄弟，说明是最后使用arr的，由它来释放空间
-   if (pArray[index]->ppid == 1 && pArray[index]->nxtBrother == -1) printf("dddddddddddddddddddddddddddddddddddddddddddd\n"); 
 
 }
 
