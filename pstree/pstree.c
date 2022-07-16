@@ -215,6 +215,7 @@ void printTree(int index, int offset, int newline, int len, int* arr){    //递�
 	}
 if (pArray[index]->ppid == 1 && pArray[index]->nxtBrother == -1) printf("ccccccccccccccccccccccccccccccccccccccccccccc\n");
 	if (index != 0 && pArray[index]->nxtBrother == -1) free(arr);      //没有下一个兄弟，说明是最后使用arr的，由它来释放空间
+   if (pArray[index]->ppid == 1 && pArray[index]->nxtBrother == -1) printf("dddddddddddddddddddddddddddddddddddddddddddd\n"); 
 
 }
 
