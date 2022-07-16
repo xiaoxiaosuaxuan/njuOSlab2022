@@ -47,6 +47,8 @@ int main(int argc, char *argv[]) {
 		printTree(0, 0, 0, 0, NULL);
 		freeSpace();
 	}
+	printf("\n");
+	return 0;
 }
 
 
