@@ -79,7 +79,6 @@ struct pnode* getProcessInfo(int pid){            //读取进程下的stat文件
 	assert(fstat);
 	int tmpint; char tmpchar;
 	fscanf(fstat, "%d (%s %c %d",&tmpint, pro->name, &tmpchar, &(pro->ppid));
-	pro->pid = tmpint;
 	pro->name[strlen(pro->name) - 1] = 0;
 	return pro;
 }
@@ -158,14 +157,6 @@ int printNode(int i){                //打印进程名(PID)，返回打印的长
 
 
 void printTree(int index, int offset, int newline, int len, int* arr){    //递归打印出树
-	if (pArray[index]->pid == 1471){
-		printf("i'm 1471 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n");
-		return;
-		struct pnode* a = pArray[index];
-		if (a->nxtBrother != -1){
-			printf("%s(%d)aaaaaaa", pArray[a->nxtBrother]->name, pArray[a->nxtBrother]->pid);
-		}
-	}
 	assert(pArray[index]->pid != 2);
 	assert(index >= 0 && index < pNum);
 	int selfLen = 0;
@@ -199,7 +190,6 @@ void printTree(int index, int offset, int newline, int len, int* arr){    //递�
 			}
 		}
 		selfLen = printNode(index); 
-if (index != 0 && pArray[index]->nxtBrother == -1) { printf("aaaaaaaa");}
 	}
 	int son = pArray[index]->firstSon;                               
 	if (son != -1){
@@ -218,7 +208,7 @@ if (index != 0 && pArray[index]->nxtBrother == -1) { printf("aaaaaaaa");}
 			tmp = pArray[tmp->nxtBrother];
 		}
 	}
-	if (index != 0 && pArray[index]->nxtBrother == -1) {free(arr); printf("aaaaaaaa");}      //没有下一个兄弟，说明是最后使用arr的，由它来释放空间
+	if (index != 0 && pArray[index]->nxtBrother == -1) {free(arr); }      //没有下一个兄弟，说明是最后使用arr的，由它来释放空间
 
 }
 
