@@ -181,9 +181,7 @@ void printTree(int index, int offset, int newline, int len, int* arr){    //é€’å
 			}
 			if (arr[i]>0) putchar('|'); else putchar(' ');
 		}
-	    if (pArray[index]->ppid == 1 && pArray[index]->nxtBrother == -1) printf("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n"); //aaaaaaaaaaaaaaaaaaaaaaaaaa
 		printf("\n");
-	    if (pArray[index]->ppid == 1 && pArray[index]->nxtBrother == -1) printf("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n"); //aaaaaaaaaaaaaaaaaaaaaaaaaa
 		for (int i = 0; i < len; ++i){
 			if (i == 0) for (int j = 0; j < abs(arr[0]); ++j) putchar(' ');
 			else for (int j = 0; j < abs(arr[i])-abs(arr[i-1])-1; ++j) putchar(' ');
@@ -192,6 +190,8 @@ void printTree(int index, int offset, int newline, int len, int* arr){    //é€’å
 				if (arr[i]>0) putchar('|'); else putchar(' ');
 			}
 		}
+
+	    if (pArray[index]->ppid == 1 && pArray[index]->nxtBrother == -1) printf("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n"); //aaaaaaaaaaaaaaaaaaaaaaaaaa
 		selfLen = printNode(index); 
 	}
 	int son = pArray[index]->firstSon;                               
