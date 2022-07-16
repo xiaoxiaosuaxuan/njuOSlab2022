@@ -157,7 +157,7 @@ int printNode(int i){                //打印进程名(PID)，返回打印的长
 
 
 void printTree(int index, int offset, int newline, int len, int* arr){    //递归打印出树
-	if (pArray[index]->ppid == 1 && pArray[index]->nxtBrother == -1) printf("%s%d", pArray[index]->name, pArray[index]->pid);
+	if (pArray[index]->ppid == 1 && pArray[index]->nxtBrother == -1) printf("%s(%d)", pArray[index]->name, pArray[index]->pid);
 	assert(pArray[index]->pid != 2);
 	assert(index >= 0 && index < pNum);
 	int selfLen = 0;
@@ -182,7 +182,7 @@ void printTree(int index, int offset, int newline, int len, int* arr){    //递�
 			if (arr[i]>0) putchar('|'); else putchar(' ');
 		}
 		printf("\n");
-
+	    if (pArray[index]->ppid == 1 && pArray[index]->nxtBrother == -1) printf("aaaaa"); //aaaaaaaaaaaaaaaaaaaaaaaaaa
 		for (int i = 0; i < len; ++i){
 			if (i == 0) for (int j = 0; j < abs(arr[0]); ++j) putchar(' ');
 			else for (int j = 0; j < abs(arr[i])-abs(arr[i-1])-1; ++j) putchar(' ');
