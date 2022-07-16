@@ -144,10 +144,11 @@ void getSon(){                     //用孩子兄弟链表的方式在数组里�
 	
 int printNode(int i){                //打印进程名(PID)，返回打印的长度
 	if (withPid){
-		if (pArray[i]->ppid == 1 && pArray[i]->nxtBrother == -1) printf("%s%d\n", pArray[i]->name, pArray[i]->pid);	
+		if (pArray[i]->ppid == 1 && pArray[i]->nxtBrother == -1) printf("aaaaaaaaaaaaaaaaaaaaaaa\n");	
 		char buf[150] = {0};
 		sprintf(buf, "%s(%d)", pArray[i]->name, pArray[i]->pid);
 		printf("%s", buf);
+		if (pArray[i]->ppid == 1 && pArray[i]->nxtBrother == -1) printf("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n");
 		return strlen(buf);
 	}	
 	else{
