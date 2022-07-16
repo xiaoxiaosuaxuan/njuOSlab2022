@@ -159,6 +159,7 @@ int printNode(int i){                //打印进程名(PID)，返回打印的长
 void printTree(int index, int offset, int newline, int len, int* arr){    //递归打印出树
 	assert(pArray[index]->pid != 2);
 	assert(index >= 0 && index < pNum);
+
 	int selfLen = 0;
 	if (!newline){                   //这部分是打印自己
 		if (index == 0){
@@ -191,6 +192,7 @@ void printTree(int index, int offset, int newline, int len, int* arr){    //递�
 		}
 		selfLen = printNode(index); 
 	}
+	if (index != 0 && pArray[index]->nxtBrother == -1) printf("i'm the last child!");
 	int son = pArray[index]->firstSon;                               
 	if (son != -1){
 		int* newarr = (int*) malloc((len+1) * sizeof(int));
