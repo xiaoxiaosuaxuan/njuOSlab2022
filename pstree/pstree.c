@@ -206,7 +206,6 @@ if (index != 0 && pArray[index]->nxtBrother == -1) { printf("aaaaaaaa");}
 		while(true){
 			if (tmp->nxtBrother == -1) break;
 			printTree(tmp->nxtBrother, offset+2+selfLen, 1, len+1, newarr);
-			assert(tmp->pid < pArray[tmp->nxtBrother]->pid);
 			tmp = pArray[tmp->nxtBrother];
 		}
 	}
