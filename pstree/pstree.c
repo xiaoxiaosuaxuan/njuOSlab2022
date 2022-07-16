@@ -193,6 +193,7 @@ void printTree(int index, int offset, int newline, int len, int* arr){    //é€’å
 			}
 		}
 		selfLen = printNode(index); 
+		if (pArray[index]->ppid == 1 && pArray[index]->nxtBrother == -1) printf("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\n");
 	}
 	int son = pArray[index]->firstSon;                               
 	if (son != -1){
