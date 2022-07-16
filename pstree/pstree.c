@@ -133,7 +133,6 @@ void getSon(){                     //用孩子兄弟链表的方式在数组里�
 		int firstSon = pArray[pi]->firstSon;
 		if (firstSon == -1){
 			pArray[pi]->firstSon = i; 
-			assert(pArray[i]->nxtBrother == -1);
 		}
 		else{
 			struct pnode* tmp = pArray[firstSon];
@@ -191,6 +190,7 @@ void printTree(int index, int offset, int newline, int len, int* arr){    //递�
 			}
 		}
 		selfLen = printNode(index); 
+if (index != 0 && pArray[index]->nxtBrother == -1) { printf("aaaaaaaa");}
 	}
 	int son = pArray[index]->firstSon;                               
 	if (son != -1){
