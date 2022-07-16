@@ -79,6 +79,7 @@ struct pnode* getProcessInfo(int pid){            //读取进程下的stat文件
 	assert(fstat);
 	int tmpint; char tmpchar;
 	fscanf(fstat, "%d (%s %c %d",&tmpint, pro->name, &tmpchar, &(pro->ppid));
+	pro->pid = tmpint;
 	pro->name[strlen(pro->name) - 1] = 0;
 	return pro;
 }
