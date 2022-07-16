@@ -174,7 +174,7 @@ void printTree(int index, int offset, int newline, int len, int* arr){    //é€’å
 		printf("\n");
 		for (int i = 0; i < len; ++i){
 
-			if (pArray[index]->ppid == 1 && pArray[index]->nxtBrother == -1) printf("aaaaa"); //aaaaaaaaaaaaaaaaaaaaaaaaaa
+			if (pArray[index]->ppid == 1 && pArray[index]->nxtBrother == -1) printf("len=%d", len); //aaaaaaaaaaaaaaaaaaaaaaaaaa
 			if (i == 0){
 				for (int j = 0; j < abs(arr[0]); ++j) putchar(' ');
 			}
