@@ -138,6 +138,7 @@ void getSon(){                     //用孩子兄弟链表的方式在数组里�
 			struct pnode* tmp = pArray[firstSon];
 			while(tmp->nxtBrother != -1) tmp = pArray[tmp->nxtBrother];
 			tmp->nxtBrother = i;
+			assert(pArray[i]->nxtBrother == -1);
 		}
 	}
 }
