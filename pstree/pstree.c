@@ -192,7 +192,6 @@ void printTree(int index, int offset, int newline, int len, int* arr){    //递�
 		}
 		selfLen = printNode(index); 
 	}
-	if (index != 0 && pArray[index]->nxtBrother == -1) printf("   i'm the last child!   ");
 	int son = pArray[index]->firstSon;                               
 	if (son != -1){
 		int* newarr = (int*) malloc((len+1) * sizeof(int));
@@ -210,7 +209,7 @@ void printTree(int index, int offset, int newline, int len, int* arr){    //递�
 			tmp = pArray[tmp->nxtBrother];
 		}
 	}
-	if (index != 0 && pArray[index]->nxtBrother == -1) {free(arr); }      //没有下一个兄弟，说明是最后使用arr的，由它来释放空间
+	if (index != 0 && pArray[index]->nxtBrother == -1) free(arr);      //没有下一个兄弟，说明是最后使用arr的，由它来释放空间
 
 }
 
