@@ -1,181 +1,169 @@
-systemd--systemd-journal
-         |
-         +systemd-udevd
-         |
-         +systemd-timesyn
-         |
-         +systemd-resolve
-         |
-         +accounts-daemon
-         |
-         +cron
-         |
-         +acpid
-         |
-         +rsyslogd
-         |
-         +ModemManager
-         |
-         +avahi-daemon--avahi-daemon
-         |
-         +systemd-logind
-         |
-         +dbus-daemon
-         |
-         +NetworkManager--dhclient
-         |
-         +wpa_supplicant
-         |
-         +irqbalance
-         |
-         +cupsd
-         |
-         +networkd-dispat
-         |
-         +udisksd
-         |
-         +Main
-         |
-         +polkitd
-         |
-         +cups-browsed
-         |
-         +snapd
-         |
-         +unattended-upgr
-         |
-         +gdm3--gdm-session-wor--gdm-x-session--Xorg
-         |     |                               |
-         |     |                               +gnome-session-b--gnome-shell--ibus-daemon--ibus-dconf
-         |     |                                                |                         |
-         |     |                                                |                         +ibus-engine-sim
-         |     |                                                |
-         |     |                                                +gsd-xsettings
-         |     |                                                |
-         |     |                                                +gsd-a11y-settin
-         |     |                                                |
-         |     |                                                +gsd-clipboard
-         |     |                                                |
-         |     |                                                +gsd-color
-         |     |                                                |
-         |     |                                                +gsd-datetime
-         |     |                                                |
-         |     |                                                +gsd-housekeepin
-         |     |                                                |
-         |     |                                                +gsd-keyboard
-         |     |                                                |
-         |     |                                                +gsd-media-keys
-         |     |                                                |
-         |     |                                                +gsd-mouse
-         |     |                                                |
-         |     |                                                +gsd-power
-         |     |                                                |
-         |     |                                                +gsd-print-notif
-         |     |                                                |
-         |     |                                                +gsd-rfkill
-         |     |                                                |
-         |     |                                                +gsd-screensaver
-         |     |                                                |
-         |     |                                                +gsd-sharing
-         |     |                                                |
-         |     |                                                +gsd-smartcard
-         |     |                                                |
-         |     |                                                +gsd-sound
-         |     |                                                |
-         |     |                                                +gsd-wacom
-         |     |
-         |     +gdm-session-wor--gdm-x-session--Xorg
-         |                                     |
-         |                                     +gnome-session-b--ssh-agent
-         |                                                      |
-         |                                                      +gnome-shell--ibus-daemon--ibus-dconf
-         |                                                      |                         |
-         |                                                      |                         +ibus-engine-sim
-         |                                                      |
-         |                                                      +gsd-power
-         |                                                      |
-         |                                                      +gsd-print-notif
-         |                                                      |
-         |                                                      +gsd-rfkill
-         |                                                      |
-         |                                                      +gsd-screensaver
-         |                                                      |
-         |                                                      +gsd-sharing
-         |                                                      |
-         |                                                      +gsd-xsettings
-         |                                                      |
-         |                                                      +gsd-wacom
-         |                                                      |
-         |                                                      +gsd-smartcard
-         |                                                      |
-         |                                                      +gsd-sound
-         |                                                      |
-         |                                                      +gsd-a11y-settin
-         |                                                      |
-         |                                                      +gsd-color
-         |                                                      |
-         |                                                      +gsd-clipboard
-         |                                                      |
-         |                                                      +gsd-datetime
-         |                                                      |
-         |                                                      +gsd-housekeepin
-         |                                                      |
-         |                                                      +gsd-keyboard
-         |                                                      |
-         |                                                      +gsd-media-keys
-         |                                                      |
-         |                                                      +gsd-mouse
-         |                                                      |
-         |                                                      +gsd-disk-utilit
-         |                                                      |
-         |                                                      +nautilus-deskto
-         |                                                      |
-         |                                                      +gnome-software
-         |                                                      |
-         |                                                      +update-notifier
-         |
-         +sshd--sshd--sshd--bash--pstree-32
-         |
-         +whoopsie
-         |
-         +kerneloops
-         |
-         +kerneloops
-         |
-         +upowerd
-         |
-         +systemd--(sd-pam)
-         |        |
-         |        +dbus-daemon
-         |        |
-         |        +at-spi-bus-laun--dbus-daemon
-         |        |
-         |        +gvfsd
-         |        |
-         |        +gvfsd-fuse
-         |        |
-         |        +at-spi2-registr
-         |        |
-         |        +pulseaudio
-         |        |
-         |        +ibus-portal
-         |        |
-         |        +xdg-permission-
-         |
-         +rtkit-daemon
-         |
-         +ibus-x11
-         |
-         +boltd
-         |
-         +packagekitd
-         |
-         +colord
-         |
-         +systemd--(sd-pam)
-         |        |
-         |        +dbus-daemon
-         |        |
-         |        +gvfsd--gvfsd-trash
-         |        |
-         
+systemd(1)--systemd-journal(384)
+            |
+            +systemd-udevd(436)
+            |
+            +systemd-resolve(500)
+            |
+            +systemd-timesyn(501)
+            |
+            +accounts-daemon(545)
+            |
+            +acpid(546)
+            |
+            +avahi-daemon(549)--avahi-daemon(608)
+            |
+            +cron(552)
+            |
+            +dbus-daemon(554)
+            |
+            +NetworkManager(556)
+            |
+            +irqbalance(563)
+            |
+            +networkd-dispat(569)
+            |
+            +polkitd(573)
+            |
+            +rsyslogd(580)
+            |
+            +snapd(586)
+            |
+            +switcheroo-cont(587)
+            |
+            +systemd-logind(590)
+            |
+            +udisksd(593)
+            |
+            +wpa_supplicant(597)
+            |
+            +ModemManager(622)
+            |
+            +sshd(656)--sshd(4493)--sshd(4580)--bash(4581)
+            |
+            +unattended-upgr(674)
+            |
+            +whoopsie(796)
+            |
+            +kerneloops(801)
+            |
+            +kerneloops(807)
+            |
+            +bluetoothd(855)
+            |
+            +gdm3(892)--gdm-session-wor(2971)--gdm-x-session(3000)--Xorg(3002)
+            |                                                      |
+            |                                                      +gnome-session-b(3012)--ssh-agent(3079)
+            |
+            +rtkit-daemon(1070)
+            |
+            +upowerd(1249)
+            |
+            +colord(1453)
+            |
+            +systemd(2404)--(sd-pam)(2408)
+            |              |
+            |              +pulseaudio(2420)
+            |              |
+            |              +tracker-miner-f(2422)
+            |              |
+            |              +dbus-daemon(2425)
+            |              |
+            |              +gvfsd(2447)--gvfsd-trash(3244)
+            |              |
+            |              +gvfsd-fuse(2457)
+            |              |
+            |              +gvfs-udisks2-vo(2467)
+            |              |
+            |              +gvfs-mtp-volume(2479)
+            |              |
+            |              +gvfs-afc-volume(2489)
+            |              |
+            |              +gvfs-goa-volume(2497)
+            |              |
+            |              +goa-daemon(2503)
+            |              |
+            |              +goa-identity-se(2522)
+            |              |
+            |              +gvfs-gphoto2-vo(2530)
+            |              |
+            |              +at-spi-bus-laun(3096)--dbus-daemon(3101)
+            |              |
+            |              +gnome-session-c(3107)
+            |              |
+            |              +gnome-session-b(3114)--gsd-disk-utilit(3341)
+            |              |                      |
+            |              |                      +evolution-alarm(3369)
+            |              |                      |
+            |              |                      +update-notifier(3561)
+            |              |
+            |              +gnome-shell(3127)--ibus-daemon(3148)--ibus-memconf(3152)
+            |              |                                     |
+            |              |                                     +ibus-extension-(3153)
+            |              |                                     |
+            |              |                                     +ibus-engine-sim(3349)
+            |              |
+            |              +ibus-x11(3157)
+            |              |
+            |              +ibus-portal(3159)
+            |              |
+            |              +at-spi2-registr(3170)
+            |              |
+            |              +xdg-permission-(3173)
+            |              |
+            |              +gnome-shell-cal(3178)
+            |              |
+            |              +evolution-sourc(3187)
+            |              |
+            |              +evolution-calen(3205)
+            |              |
+            |              +dconf-service(3221)
+            |              |
+            |              +evolution-addre(3227)
+            |              |
+            |              +gjs(3238)
+            |              |
+            |              +gsd-a11y-settin(3267)
+            |              |
+            |              +gsd-color(3269)
+            |              |
+            |              +gsd-datetime(3271)
+            |              |
+            |              +gsd-housekeepin(3274)
+            |              |
+            |              +gsd-keyboard(3281)
+            |              |
+            |              +gsd-media-keys(3286)
+            |              |
+            |              +gsd-power(3291)
+            |              |
+            |              +gsd-print-notif(3304)
+            |              |
+            |              +gsd-rfkill(3307)
+            |              |
+            |              +gsd-screensaver(3308)
+            |              |
+            |              +gsd-sharing(3324)
+            |              |
+            |              +gsd-smartcard(3333)
+            |              |
+            |              +gsd-sound(3336)
+            |              |
+            |              +gsd-usb-protect(3344)
+            |              |
+            |              +gsd-wacom(3348)
+            |              |
+            |              +gsd-wwan(3351)
+            |              |
+            |              +gsd-xsettings(3352)
+            |              |
+            |              +gsd-printer(3403)
+            |              |
+            |              +gvfsd-metadata(3541)
+            |              |
+            |              +tracker-store(6185)
+            |
+            +gnome-keyring-d(2995)
+            |
+            +cupsd(5684)
+            |
+            +cups-browsed(5689)
