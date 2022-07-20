@@ -13,3 +13,4 @@ git:
 	@while (test -e .git/index.lock); do sleep 0.1; done
 	@(uname -a && uptime) | git commit -F - -q --author='tracer-nju <tracer@nju.edu.cn>' --no-verify --allow-empty
 	@sync
+

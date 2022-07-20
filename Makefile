@@ -31,3 +31,4 @@ clean:
 	rm -f $(NAME)-64 $(NAME)-32 $(NAME)-64.so $(NAME)-32.so
 
 include ../Makefile.lab
+
